@@ -1,0 +1,253 @@
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qidiruv - Monitorlar Do'koni</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="index5.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Monitorlar Do'koni</h1>
+            <p class="subtitle">Mahsulotlarni qidirish</p>
+        </header>
+        
+        <div class="navigation">
+            <a href="#" class="nav-btn"><i class="fas fa-arrow-left"></i> Ortga qaytish</a>
+            <a href="#" class="nav-btn"><i class="fas fa-home"></i> Bosh sahifa</a>
+            <a href="#" class="nav-btn"><i class="fas fa-shopping-cart"></i> Savat (3)</a>
+        </div>
+        
+        <div class="search-container">
+            <div class="search-box">
+                <input type="text" class="search-input" placeholder="Mahsulot nomi, brendi yoki xususiyatlarini yozing...">
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+            
+            <div class="filters">
+                <div class="filter-group">
+                    <label class="filter-label">Brend</label>
+                    <select class="filter-select">
+                        <option value="">Barchasi</option>
+                        <option value="samsung">Samsung</option>
+                        <option value="dell">Dell</option>
+                        <option value="lg">LG</option>
+                        <option value="asus">ASUS</option>
+                        <option value="hp">HP</option>
+                        <option value="acer">Acer</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label class="filter-label">Narx oralig'i</label>
+                    <div class="price-range">
+                        <input type="number" class="price-input" placeholder="Min">
+                        <span>-</span>
+                        <input type="number" class="price-input" placeholder="Max">
+                    </div>
+                </div>
+                
+                <div class="filter-group">
+                    <label class="filter-label">O'lcham</label>
+                    <select class="filter-select">
+                        <option value="">Barchasi</option>
+                        <option value="24">24"</option>
+                        <option value="27">27"</option>
+                        <option value="32">32"</option>
+                        <option value="34">34" va kattaroq</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label class="filter-label">Ekran texnologiyasi</label>
+                    <select class="filter-select">
+                        <option value="">Barchasi</option>
+                        <option value="ips">IPS</option>
+                        <option value="va">VA</option>
+                        <option value="tn">TN</option>
+                        <option value="oled">OLED</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        
+        <div class="results-info">
+            <div class="results-count">Topilgan mahsulotlar: 12</div>
+            <div>
+                <select class="sort-select">
+                    <option value="popular">Mashhurlik bo'yicha</option>
+                    <option value="price-low">Arzondan qimmatga</option>
+                    <option value="price-high">Qimmatdan arzonga</option>
+                    <option value="new">Yangi mahsulotlar</option>
+                    <option value="rating">Reyting bo'yicha</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="products-grid">
+            <!-- Samsung monitors -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.samsung.com/is/image/samsung/p6pim/uz/ua27t550aauxc/gallery/uz-t55a-ua27t550aauxc-530673877?$650_519_PNG$" alt="Samsung 27 Curved Monitor">
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">SAMSUNG</div>
+                    <h3 class="product-name">27" Curved Monitor</h3>
+                    <p class="product-specs">144Hz, 1ms, QHD, Curved Display</p>
+                    <div class="product-price">$329.99</div>
+                    <button class="buy-btn">Savatga qo'shish</button>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.samsung.com/is/image/samsung/p6pim/uz/lc24f390fhixci/gallery/uz-cf39-lc24f390fhixci-530674091?$650_519_PNG$" alt="Samsung CF390 24">
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">SAMSUNG</div>
+                    <h3 class="product-name">CF390 24"</h3>
+                    <p class="product-specs">Qiyalikli, 60Hz, 4ms, Full HD</p>
+                    <div class="product-price">$159.99</div>
+                    <button class="buy-btn">Savatga qo'shish</button>
+                </div>
+            </div>
+            
+            <!-- Dell monitors -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/products/monitors/dell/u-series/u2723qe/images/monitor-u2723qe-campaign-hero-504x350-ng.psd?fmt=png-alpha&pscan=auto&scl=1&wid=3318&hei=2408&qlt=100,1&resMode=sharp2&size=3318,2408" alt="Dell Ultrasharp 27">
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">DELL</div>
+                    <h3 class="product-name">Ultrasharp 27"</h3>
+                    <p class="product-specs">4K, USB-C, Color Critical</p>
+                    <div class="product-price">$589.99</div>
+                    <button class="buy-btn">Savatga qo'shish</button>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/products/monitors/dell/s-series/s2721hgf/images/monitor-s2721hgf-campaign-hero-504x350-ng.psd?fmt=png-alpha&pscan=auto&scl=1&wid=3318&hei=2408&qlt=100,1&resMode=sharp2&size=3318,2408" alt="Dell S2721HGF 27">
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">DELL</div>
+                    <h3 class="product-name">S2721HGF 27"</h3>
+                    <p class="product-specs">Curved, 144Hz, 1ms, FreeSync</p>
+                    <div class="product-price">$319.99</div>
+                    <button class="buy-btn">Savatga qo'shish</button>
+                </div>
+            </div>
+            
+            <!-- LG monitors -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://www.lg.com/us/images/monitors/md07518621/gallery/desktop-01.jpg" alt="LG UltraGear 32">
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">LG</div>
+                    <h3 class="product-name">UltraGear 32"</h3>
+                    <p class="product-specs">4K, HDR, IPS, 144Hz</p>
+                    <div class="product-price">$499.99</div>
+                    <button class="buy-btn">Savatga qo'shish</button>
+                </div>
+            </div>
+            
+            <!-- ASUS monitors -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://dlcdnwebimgs.asus.com/gain/4EF4A7A9-3C25-4552-BFF0-3F4C4AE5D885/w717/h525" alt="ASUS TUF Gaming VG279Q 27">
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">ASUS</div>
+                    <h3 class="product-name">TUF Gaming VG279Q 27"</h3>
+                    <p class="product-specs">Full HD, 144Hz, 1ms, Adaptive-Sync</p>
+                    <div class="product-price">$299.99</div>
+                    <button class="buy-btn">Savatga qo'shish</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="pagination">
+            <button class="page-btn"><i class="fas fa-chevron-left"></i></button>
+            <button class="page-btn active">1</button>
+            <button class="page-btn">2</button>
+            <button class="page-btn">3</button>
+            <button class="page-btn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        
+        <div class="recent-searches">
+            <h3 class="recent-title">Oxirgi qidiruvlar</h3>
+            <div class="search-tags">
+                <div class="search-tag">Gaming monitor</div>
+                <div class="search-tag">4K</div>
+                <div class="search-tag">Curved</div>
+                <div class="search-tag">144Hz</div>
+                <div class="search-tag">Samsung</div>
+                <div class="search-tag">27 dyuym</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Qidiruv funktsiyasi
+        document.querySelector('.search-btn').addEventListener('click', function() {
+            const searchTerm = document.querySelector('.search-input').value;
+            if (searchTerm.trim() !== '') {
+                alert(`"${searchTerm}" so'rovi bo'yicha qidiruv bajarildi`);
+                // Bu yerda haqiqiy loyihada serverga so'rov yuboriladi
+            }
+        });
+        
+        // Enter bosganda qidirish
+        document.querySelector('.search-input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                document.querySelector('.search-btn').click();
+            }
+        });
+        
+        // Filtrlash
+        document.querySelectorAll('.filter-select, .sort-select').forEach(select => {
+            select.addEventListener('change', function() {
+                alert('Filtrlar yangilandi');
+                // Bu yerda haqiqiy loyihada filtrlar bo'yicha mahsulotlar saralanadi
+            });
+        });
+        
+        // Narx oralig'i
+        document.querySelectorAll('.price-input').forEach(input => {
+            input.addEventListener('change', function() {
+                const minPrice = document.querySelectorAll('.price-input')[0].value;
+                const maxPrice = document.querySelectorAll('.price-input')[1].value;
+                
+                if (minPrice || maxPrice) {
+                    alert(`Narx oralig'i: ${minPrice || '0'} - ${maxPrice || 'cheksiz'}`);
+                    // Bu yerda haqiqiy loyihada narx bo'yicha filtr qo'llaniladi
+                }
+            });
+        });
+        
+        // Sahifa tugmalari
+        document.querySelectorAll('.page-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                if (this.querySelector('i')) {
+                    alert('Boshqa sahifaga o\'tildi');
+                    // Bu yerda haqiqiy loyihada sahifa almashinadi
+                } else {
+                    document.querySelectorAll('.page-btn').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                }
+            });
+        });
+        
+        // Qidiruv teglari
+        document.querySelectorAll('.search-tag').forEach(tag => {
+            tag.addEventListener('click', function() {
+                document.querySelector('.search-input').value = this.textContent;
+                document.querySelector('.search-btn').click();
+            });
+        });
+    </script>
+</body>
+</html>

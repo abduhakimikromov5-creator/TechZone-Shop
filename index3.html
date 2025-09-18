@@ -1,0 +1,147 @@
+ <!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savat - Monitorlar Do'koni</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="index4.css">
+    <div class="container">
+        <header>
+            <h1>Monitorlar Do'koni</h1>
+            <p class="subtitle">Sizning savatingiz</p>
+        </header>
+        
+        <div class="navigation">
+            <a href="#" class="nav-btn"><i class="fas fa-arrow-left"></i> Ortga qaytish</a>
+            <a href="#" class="nav-btn"><i class="fas fa-home"></i> Bosh sahifa</a>
+        </div>
+        
+        <div class="cart-container">
+            <div class="cart-items">
+                <h2 class="cart-title">Savatdagi mahsulotlar</h2>
+                
+                <div class="cart-item">
+                    <div class="cart-item-image">
+                        <img src="https://images.samsung.com/is/image/samsung/p6pim/uz/ua27t550aauxc/gallery/uz-t55a-ua27t550aauxc-530673877?$650_519_PNG$" alt="Samsung 27 Curved Monitor">
+                    </div>
+                    <div class="cart-item-details">
+                        <h3 class="cart-item-name">Samsung 27" Curved Monitor</h3>
+                        <div class="cart-item-price">$329.99</div>
+                        <div class="cart-item-quantity">
+                            <button class="quantity-btn">-</button>
+                            <input type="text" class="quantity-input" value="1">
+                            <button class="quantity-btn">+</button>
+                        </div>
+                        <button class="cart-item-remove"><i class="fas fa-trash"></i> O'chirish</button>
+                    </div>
+                </div>
+                
+                <div class="cart-item">
+                    <div class="cart-item-image">
+                        <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/products/monitors/dell/u-series/u2723qe/images/monitor-u2723qe-campaign-hero-504x350-ng.psd?fmt=png-alpha&pscan=auto&scl=1&wid=3318&hei=2408&qlt=100,1&resMode=sharp2&size=3318,2408" alt="Dell Ultrasharp 27">
+                    </div>
+                    <div class="cart-item-details">
+                        <h3 class="cart-item-name">Dell Ultrasharp 27"</h3>
+                        <div class="cart-item-price">$589.99</div>
+                        <div class="cart-item-quantity">
+                            <button class="quantity-btn">-</button>
+                            <input type="text" class="quantity-input" value="1">
+                            <button class="quantity-btn">+</button>
+                        </div>
+                        <button class="cart-item-remove"><i class="fas fa-trash"></i> O'chirish</button>
+                    </div>
+                </div>
+                
+                <div class="cart-item">
+                    <div class="cart-item-image">
+                        <img src="https://www.lg.com/us/images/monitors/md07518621/gallery/desktop-01.jpg" alt="LG UltraGear 32">
+                    </div>
+                    <div class="cart-item-details">
+                        <h3 class="cart-item-name">LG UltraGear 32"</h3>
+                        <div class="cart-item-price">$499.99</div>
+                        <div class="cart-item-quantity">
+                            <button class="quantity-btn">-</button>
+                            <input type="text" class="quantity-input" value="1">
+                            <button class="quantity-btn">+</button>
+                        </div>
+                        <button class="cart-item-remove"><i class="fas fa-trash"></i> O'chirish</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cart-summary">
+                <h2 class="cart-title">Buyurtma xulosasi</h2>
+                
+                <div class="summary-item">
+                    <span>3 ta mahsulot</span>
+                    <span>$1419.97</span>
+                </div>
+                
+                <div class="summary-item">
+                    <span>Yetkazib berish</span>
+                    <span>Bepul</span>
+                </div>
+                
+                <div class="summary-item">
+                    <span>Solig</span>
+                    <span>$141.99</span>
+                </div>
+                
+                <div class="summary-total">
+                    <span>Jami:</span>
+                    <span>$1561.96</span>
+                </div>
+                
+                <button class="checkout-btn">Buyurtma berish</button>
+                <a href="#" class="continue-shopping">Davlat etib xarid qilish</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Miqdor tugmalari
+        document.querySelectorAll('.quantity-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const input = this.parentElement.querySelector('.quantity-input');
+                let value = parseInt(input.value);
+                
+                if (this.textContent === '+') {
+                    value++;
+                } else if (this.textContent === '-' && value > 1) {
+                    value--;
+                }
+                
+                input.value = value;
+                updateCartTotal();
+            });
+        });
+        
+        // O'chirish tugmasi
+        document.querySelectorAll('.cart-item-remove').forEach(btn => {
+            btn.addEventListener('click', function() {
+                this.closest('.cart-item').remove();
+                updateCartTotal();
+                
+                // Agar savat bo'sh bo'lsa
+                if (document.querySelectorAll('.cart-item').length === 0) {
+                    document.querySelector('.cart-items').innerHTML = `
+                        <div class="empty-cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            <p>Savatingiz hozircha bo'sh</p>
+                            <a href="#" class="nav-btn"><i class="fas fa-shopping-bag"></i> Xarid qilishni davom etish</a>
+                        </div>
+                    `;
+                }
+            });
+        });
+        
+        // Jami narxni yangilash
+        function updateCartTotal() {
+            // Bu yerda haqiqiy loyihada server tomondan hisoblash kerak
+            // Biz faqat ko'rinish uchun oddiy hisoblash qilamiz
+            console.log("Savat yangilandi");
+        }
+    </script>
+</body>
+</html>
